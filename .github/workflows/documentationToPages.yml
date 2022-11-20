@@ -30,12 +30,12 @@ jobs:
       - name: Build
         uses: andstor/jsdoc-action@v1
         with:
-          source_dir: ./source
+          source_dir: /home/runner/work/cse110-fa22-group13/cse110-fa22-group13/source
           output_dir: ./out
           template: minami
           front_page: README.md
       - name: Print path
-        run: ls -la /home/runner/work/cse110-fa22-group13/cse110-fa22-group13/    
+        run: ls -la /home/runner/work/cse110-fa22-group13/cse110-fa22-group13/source    
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
