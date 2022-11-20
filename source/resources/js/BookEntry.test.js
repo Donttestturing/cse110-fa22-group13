@@ -2,7 +2,7 @@
 * The unit test file for the BookEntry class - BookEntry.js
 *@TestFile
 */
-const BookEntryClass = require('./BookEntry.js')
+const BookEntryClass = require('./source/resources/js/BookEntry.js')
 //import {BookEntryClass} from './BookEntry.js';
 
 //test constructor/setters
