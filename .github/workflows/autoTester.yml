@@ -10,11 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Print path
-      run: ls -la /home/runner/work/cse110-fa22-group13/cse110-fa22-group13/    
+      run: ls -la /home/runner/work/cse110-fa22-group13/cse110-fa22-group13/source    
     - uses: actions/setup-node@v3
       with:
         node-version: 16
     - name: Run Jest
       uses: stefanoeb/jest-action@1.0.3
       with:
-        jestArgs: path/to/my.test.js
+        jestArgs: /home/runner/work/cse110-fa22-group13/cse110-fa22-group13/source/resources/js
