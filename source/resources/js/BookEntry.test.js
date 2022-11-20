@@ -2,7 +2,7 @@
 * The unit test file for the BookEntry class - BookEntry.js
 *@TestFile
 */
-const BookEntryClass = require('./source/resources/js/BookEntry.js')
+const BookEntryClass = require('./placeholder.js')
 //import {BookEntryClass} from './BookEntry.js';
 
 //test constructor/setters
@@ -60,12 +60,12 @@ test('space string constructor', () => {
   console.log(testEntryEmptyStrings.printBookEntry());
   expect(testEntryEmptyStrings.printBookEntry()).toBe('  by:  , rating: undefined, progress: undefined, status: undefined, Date read: undefined \nReview:  , ISBN: undefined, tags:  ');
 });
-
+/*
 test('random undefined constructor', () => {
   const testEntryRandomUndefined = BookEntryClass.bookentry('', undefined, '', undefined, undefined, '', undefined, undefined, undefined);
   expect(testEntryRandomUndefined.printBookEntry()).toBe('undefined by: undefined, rating: , progress: undefined, status: undefined, Date read: undefined \nReview: , ISBN: undefined, tags: ');
 });
-/*
+
 test('null constructor', () => {
   const testEntryNull = BookEntryClass.bookentry(null);
   expect(testEntryNull.ISBN).toBe(undefined);
