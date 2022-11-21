@@ -57,7 +57,6 @@ test('8/9 entries constructor', () => {
 
 test('space string constructor', () => {
   const testEntryEmptyStrings = BookEntryClass.bookentry(' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
-  console.log(testEntryEmptyStrings.printBookEntry());
   expect(testEntryEmptyStrings.printBookEntry()).toBe('  by:  , rating: undefined, progress: undefined, status: undefined, Date read: undefined \nReview:  , ISBN: undefined, tags:  ');
 });
 /*
