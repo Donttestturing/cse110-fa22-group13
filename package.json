@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "jest"
+    "start": "lint"
   },
   "jest": {
     "preset": "jest-puppeteer",
