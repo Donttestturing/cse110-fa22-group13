@@ -1,0 +1,18 @@
+name: run EsLint
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+  pull_request:  
+    branches: ["main"]
+    
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: install packages
+        run: npm i
+      - name: EsLint
+        run: npm run lint -- --fix
