@@ -6,6 +6,7 @@
 */
  const STATUSES = ['completed', 'in progress', 'planned'] 
  class BookEntry {
+  
     /**
      * 
      * @class BookEntry
