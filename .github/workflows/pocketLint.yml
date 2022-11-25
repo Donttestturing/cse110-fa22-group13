@@ -1,18 +1,25 @@
 name: run EsLint
 
 on:
-  # Runs on pushes targeting the default branch
+  pull_request:
+      branches:
+      - main
   push:
-    branches: ["main"]
-  pull_request:  
-    branches: ["main"]
-    
+    branches:
+      - main
+
 jobs:
-  linter:
+  eslint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: install packages
-        run: npm lint i
-      - name: EsLint
-        run: npm run lint -- --fix
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci # or yarn install
+      - uses: sibiraj-s/action-eslint@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
+          eslint-args: '--ignore-path=.gitignore --quiet'
+          extensions: 'js,jsx,ts,tsx'
+          annotations: true
