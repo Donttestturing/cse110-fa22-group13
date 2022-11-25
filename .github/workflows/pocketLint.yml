@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: install packages
-        run: npm i
+        run: npm lint i
       - name: EsLint
         run: npm run lint -- --fix
