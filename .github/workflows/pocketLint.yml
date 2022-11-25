@@ -2,7 +2,7 @@ name: run EsLint
 
 on:
   pull_request:
-      branches:
+    branches:
       - main
   push:
     branches:
@@ -20,6 +20,6 @@ jobs:
       - uses: sibiraj-s/action-eslint@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
-          eslint-args: '--ignore-path=.gitignore --quiet'
+          eslint-args: './source'
           extensions: 'js,jsx,ts,tsx'
           annotations: true
