@@ -21,5 +21,5 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
           eslint-args: './source'
-          extensions: 'js,jsx,ts,tsx'
+          extensions: 'js,jsx,ts,tsx,html,css'
           annotations: true
