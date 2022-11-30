@@ -31,7 +31,7 @@ jobs:
         uses: andstor/jsdoc-action@v1
         with:
           source_dir: ./source/resources/js
-          output_dir: ./out
+          output_dir: ./out/docs
           template: minami
           front_page: README.md
       - name: Print path
