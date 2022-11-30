@@ -42,6 +42,15 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: '/home/runner/work/cse110-fa22-group13/cse110-fa22-group13/out/'
+      - name: Deploy App to GitHub Pages
+        id: deployApp
+        uses: actions/deploy-pages@v1
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '/home/runner/work/cse110-fa22-group13/cse110-fa22-group13/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
