@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
-  deploy:
+  deployDocs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -47,16 +47,31 @@ jobs:
         uses: actions/deploy-pages@v1
         
         
-      - name: Deploy App to GitHub Pages
-        id: deployApp
-        uses: actions/deploy-pages@v1
+  deployApp:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ./source/resources/js
+          output_dir: ./out/docs
+          template: minami
+          front_page: README.md
+      - name: Print path
+        run: ls -la /home/runner/work/cse110-fa22-group13/cse110-fa22-group13/source    
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: '/home/runner/work/cse110-fa22-group13/cse110-fa22-group13/'
-
-
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
 
         
