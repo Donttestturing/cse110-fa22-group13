@@ -54,16 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Build
-        uses: andstor/jsdoc-action@v1
-        with:
-          source_dir: ./source/resources/js
-          output_dir: ./out/docs
-          template: minami
-          front_page: README.md
-      - name: Print path
-        run: ls -la /home/runner/work/cse110-fa22-group13/cse110-fa22-group13/source    
+        uses: actions/checkout@v3   
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
