@@ -28,7 +28,7 @@ jobs:
         with:
           recurse: true
           source_dir: ./source
-          output_dir: ./source/docs
+          output_dir: ./docs
           template: minami
           front_page: README.md
       - name: Print path
