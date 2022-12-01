@@ -5,7 +5,7 @@
 * 
 */
  const STATUSES = ['completed', 'in progress', 'planned'] 
- class BookEntry {
+ class bookeeeeeeeentry {
   
     /**
      * 
@@ -41,20 +41,20 @@
 
     /**
      * 
-     * @function printBookEntry
+     * @function printBookEntry2
      * @description Function which returns a formatted string representing the BookEntry
      * @return {string} 
      */
-     printBookEntry() {
+     printBookEntry2() {
         return `${this.title} by: ${this.authorName}, rating: ${this.rating}, progress: ${this.pageProgress}, status: ${this.status}, Date read: ${this.dateRead} \nReview: ${this.reviewTextBody}, ISBN: ${this.ISBN}, tags: ${new Array(...this.tags).join(', ')}`;
     }
 
     /**
-     * @function setTags 
+     * @function setTags2 
      * @description Function to set the tags Set which represents genres for the book, will not set invalid tags passed in
      * @param {Set} tagsToAdd
      */
-     setTags(tagsToAdd){
+     setTags2(tagsToAdd){
         if(tagsToAdd === null || tagsToAdd === undefined ){
             console.log('The tags to set was null or undefined, did not set:', tagsToAdd);
             return;
@@ -68,11 +68,11 @@
 
     /**
      * 
-     * @function setDateRead 
+     * @function setDateRead2 
      * @description Function to set the dateRead which represents the date the book was read, will not set invalid Dates
      * @param {Date} dateToSet
      */
-    setDateRead(dateToSet){
+    setDateRead2(dateToSet){
         if(dateToSet === null || dateToSet === undefined ){
             console.log('The Date to set was null or undefined, did not set:', dateToSet);
             return;
@@ -86,11 +86,11 @@
 
     /**
      * 
-     * @function setRating 
+     * @function setRating2
      * @description Function to set the rating for the book, which should be between 0 and 10, will not set invalid ratings
      * @param {Number} ratingToSet
      */
-     setRating(ratingToSet){
+     setRating2(ratingToSet){
         if(ratingToSet === null || ratingToSet === undefined ){
             console.log('The ratings to set was null or undefined, did not set:', ratingToSet);
             return;
