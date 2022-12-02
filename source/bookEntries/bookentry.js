@@ -5,28 +5,27 @@
 * 
 */
  const STATUSES = ['completed', 'in progress', 'planned'] 
+/**
+* 
+* @class bookeeeeeeeentry
+* The BookEntry class, which represents a book entry, which includes a book and the requisite information like title, ISBN, and authorName, as well as ancillary information like the status of being read, 
+* the current review for the book, the genres the book is tagged in, the date the book was read (if finished) and the current page progress of the user for that book. 
+* @description The constructor for the BookEntry Class, which takes in 9 pieces of information to represent a BookEntry, 
+* which is more than simply a book, it is also user information related to reading that book. 
+* @param {Date} dateRead - the date the book was read
+* @param {Number} rating - a number rating, representing the rating the user has given the book
+* @param {Number} pageProgress - a number representing the number of pages currently read for the book, should be a positive integer
+* @param {string} status - a string representing the current status of the book being planned, in progress, or completed
+* @param {string} reviewBodyText - a string representing the review for the book
+* @param {string} ISBN - a string representing the ISBN of the book
+* @param {string} authorName - a string representing the book author's name, should be both first and sur name
+* @param {string} title - a string representing the title of the book
+* 
+*
+* when initially creating a BookEntry for a new book, pass pageProgress=0, reviewTextBody='', rating=NaN, dateRead=Date() for defaults
+*/
  class bookeeeeeeeentry {
   
-    /**
-     * 
-     * @class bookeeeeeeeentry
-     * The BookEntry class, which represents a book entry, which includes a book and the requisite information like title, ISBN, and authorName, as well as ancillary information like the status of being read, 
-     * the current review for the book, the genres the book is tagged in, the date the book was read (if finished) and the current page progress of the user for that book. 
-     * @description The constructor for the BookEntry Class, which takes in 9 pieces of information to represent a BookEntry, 
-     * which is more than simply a book, it is also user information related to reading that book. 
-     * @param {Set} tags - a Set DS to hold the tags representing genres for the book
-     * @param {Date} dateRead - the date the book was read
-     * @param {Number} rating - a number rating, representing the rating the user has given the book
-     * @param {Number} pageProgress - a number representing the number of pages currently read for the book, should be a positive integer
-     * @param {string} status - a string representing the current status of the book being planned, in progress, or completed
-     * @param {string} reviewBodyText - a string representing the review for the book
-     * @param {string} ISBN - a string representing the ISBN of the book
-     * @param {string} authorName - a string representing the book author's name, should be both first and sur name
-     * @param {string} title - a string representing the title of the book
-     * 
-     *
-     * when initially creating a BookEntry for a new book, pass pageProgress=0, reviewTextBody='', rating=NaN, dateRead=Date() for defaults
-     */
     constructor(tags, dateRead, rating, pageProgress, status, reviewTextBody, ISBN, authorName, title){
         this.setTags(tags);
         this.setDateRead(dateRead);
