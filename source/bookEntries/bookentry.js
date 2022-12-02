@@ -5,8 +5,8 @@
 * 
 */
  const STATUSES = ['completed', 'in progress', 'planned'] 
+ 
 /**
-* 
 * @class bookeeeeeeeentry
 * The BookEntry class, which represents a book entry, which includes a book and the requisite information like title, ISBN, and authorName, as well as ancillary information like the status of being read, 
 * the current review for the book, the genres the book is tagged in, the date the book was read (if finished) and the current page progress of the user for that book. 
